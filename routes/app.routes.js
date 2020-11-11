@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
   }
 })
 
-router.post('/band', (req, res) => {
+router.post('/band', async (req, res) => {
   try {
     const { title } = req.body;
 
