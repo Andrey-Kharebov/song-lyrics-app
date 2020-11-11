@@ -1,0 +1,13 @@
+.layout {
+  display: flex;
+  padding: 15px;
+}
+
+.layout > div {
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+}
+
