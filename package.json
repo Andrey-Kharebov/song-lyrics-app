@@ -1,0 +1,20 @@
+{
+  "name": "song-lyrics-app",
+  "version": "1.0.0",
+  "description": "Song lyrics application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js"
+  },
+  "author": "Andrey Kharebov <andreykharebov@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.13"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  }
+}
