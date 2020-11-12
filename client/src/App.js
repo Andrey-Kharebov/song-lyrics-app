@@ -1,11 +1,11 @@
 import classes from './App.module.css';
-import SideNav from './components/SideNav';
+import BandsSection from './components/BandsSection';
 import 'materialize-css';
 
 function App() {
   return (
     <div className={classes.layout}>
-      <SideNav />
+      <BandsSection />
     </div>
   );
 }

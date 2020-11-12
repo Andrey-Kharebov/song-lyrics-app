@@ -17,17 +17,17 @@ router.post('/band', async (req, res) => {
 
     console.log(title);
 
-    const candidate = await Band.findOne({ title });
+    // const candidate = await Band.findOne({ title });
 
-    if (candidate) {
-     return res.status(400).json({ message: `Такая группа уже существует` }); 
-    }
+    // if (candidate) {
+    //  return res.status(400).json({ message: `Такая группа уже существует` }); 
+    // }
 
-    const band = new Band({ title });
+    // const band = new Band({ title });
 
-    await band.save();
+    // await band.save();
 
-    res.status(201).json({ message: `Группа ${ title } была добавлена в список групп.`});
+    // res.status(201).json({ message: `Группа ${ title } была добавлена в список групп.`});
   } catch (e) {
     res.status(500).json({ message: `Что-то пошло не так. Попробуйте снова.`});
   }
