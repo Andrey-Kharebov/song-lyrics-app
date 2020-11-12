@@ -2,10 +2,11 @@ const { Router } = require('express');
 const router = Router();
 const Band = require('../models/band');
 
-router.get('/', (req, res) => {
+router.get('/bands', async (req, res) => {
   try {
-    const game = 'Resident Evil 3: Nemesis';
-
+    const bands = await Band.find();
+    
+    res.status(201).json({ bands });
   } catch (e) {
     res.status(500).json({ message: `Что-то пошло не так. Попробуйте снова.`})
   }
@@ -17,17 +18,17 @@ router.post('/band', async (req, res) => {
 
     console.log(title);
 
-    // const candidate = await Band.findOne({ title });
+    const candidate = await Band.findOne({ title });
 
-    // if (candidate) {
-    //  return res.status(400).json({ message: `Такая группа уже существует` }); 
-    // }
+    if (candidate) {
+     return res.status(400).json({ message: `Исполнитель "${ title }" уже существует` }); 
+    }
 
-    // const band = new Band({ title });
+    const band = new Band({ title });
 
-    // await band.save();
+    await band.save();
 
-    // res.status(201).json({ message: `Группа ${ title } была добавлена в список групп.`});
+    res.status(201).json({ message: `Исполнитель "${ title }" был добавлен в список муз. исполнителей.`});
   } catch (e) {
     res.status(500).json({ message: `Что-то пошло не так. Попробуйте снова.`});
   }
