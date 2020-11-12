@@ -1,6 +1,5 @@
 import classes from './App.module.css';
-import BandsSection from './components/BandsSection';
-import 'materialize-css';
+import BandsSection from './components/BandsSection/BandsSection';
 
 function App() {
   return (
