@@ -15,10 +15,10 @@ export const bandsAPI = {
     return (
       instance.post(`band`, {title})
       .then(response => {
-        return response.data.message
+        return {status: 201, message: response.data.message}
       })
       .catch(error => {
-        return error.response.data.message;
+        return {status: 400, message: error.response.data.message}
       })
     )
   }

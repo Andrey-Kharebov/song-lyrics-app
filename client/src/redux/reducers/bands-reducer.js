@@ -55,7 +55,12 @@ export const fetchBands = () => (dispatch) => {
 export const addBand = (title) => (dispatch) => {
   bandsAPI.addBandToDB(title)
     .then(response => {
-      dispatch(addApiMessage(response));
+      
+      if (response.status === 400 ) {
+        return dispatch(addApiMessage(response.message));
+      }
+      
+      dispatch(addApiMessage(response.message));
       dispatch(fetchBands());
     })
 }
