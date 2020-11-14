@@ -1,14 +1,14 @@
 import React, { memo, useEffect } from 'react';
 import classes from './BandsList.module.css';
 import { connect } from 'react-redux';
-import { fetchBands, setActiveBand } from '../../../redux/reducers/bands-reducer';
+import { fetchBands, setActiveBandAndSongs, setActiveBandAndSongsAndSongs } from '../../../redux/reducers/bands-reducer';
 import Preloader from '../../helpers/Preloader/Preloader';
 
 
 function BandsList(props) {
 
-  // console.log('BAND LIST RENDER');
-
+  // console.log('BANDS LIST RENDER');
+  
   useEffect(() => {
     props.fetchBands();
   }, [props.fetchBands])
@@ -26,7 +26,7 @@ function BandsList(props) {
           return <li 
             className={ band.active ? classes.active : '' }
             key={band._id} 
-            onClick={ () => {props.setActiveBand( band._id )} }
+            onClick={ () => {props.setActiveBandAndSongs( band._id )} }
             >{band.title}
           </li>
         })}
@@ -42,4 +42,5 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { fetchBands, setActiveBand })(BandsList);
+export default connect(mapStateToProps, { fetchBands, setActiveBandAndSongs })(BandsList);
+

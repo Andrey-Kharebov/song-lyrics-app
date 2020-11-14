@@ -1,4 +1,4 @@
-.bandsSection {
+.songsSection {
   box-sizing: border-box;
   max-width: 200px;
   width: 100%;
@@ -8,10 +8,9 @@
   justify-content: space-between;
 }
 
-.bandsSection .searchSection {
-  box-sizing: border-box;
-  width: 100%;
-  height: 40px;
-  text-align: center;
-}
 
+.songsSection.unactive {
+  box-sizing: border-box;
+  border: 1px solid rgb(119, 119, 119);
+  background: rgba(50, 50, 50);
+}
