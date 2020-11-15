@@ -1,4 +1,5 @@
 import { songsAPI } from '../../components/api/api';
+import { fetchLyrics } from './lyrics-reducer';
 
 const SET_SONGS = 'SET-SONGS';
 const TOGGLE_IS_READY = 'TOGGLE-IS-READY';
@@ -74,7 +75,7 @@ export const addSong = (title, bandId) => (dispatch) => {
 
 export const setActiveSongAndLyrics = (songId) => (dispatch) => {
   dispatch(setActiveSong(songId));
-  // dispatch(fetchLyrics(songId));
+  dispatch(fetchLyrics(songId));
 }
 
 export default songsReducer;

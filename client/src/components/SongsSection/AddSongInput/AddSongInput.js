@@ -6,7 +6,7 @@ import { addSong } from '../../../redux/reducers/songs-reducer';
 
 const AddSongInput = (props) => {
 
-  console.log('ADD SONG INPUT RENDER');
+  // console.log('ADD SONG INPUT RENDER');
   // console.log(props);
 
   const message = useMessage();

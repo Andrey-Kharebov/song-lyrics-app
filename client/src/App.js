@@ -1,5 +1,6 @@
 import classes from './App.module.css';
 import BandsSection from './components/BandsSection/BandsSection';
+import LyricsSection from './components/LyricsSection/LyricsSection';
 import SongsSection from './components/SongsSection/SongsSection';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className={classes.layout}>
       <BandsSection />
       <SongsSection />
+      <LyricsSection />
     </div>
   );
 }
