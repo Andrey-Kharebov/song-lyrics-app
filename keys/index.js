@@ -1,4 +1,6 @@
-module.exports = {
-  PORT: 5000,
-  MONGODB_URI: 'mongodb+srv://Andrey:xwWusf4TlaVCUrBw@cluster0.fsehd.mongodb.net/song-lyrics-app'
+if (process.env.NODE_ENV === 'production') {
+  module.exports = require('./keys.prod');
+} else {
+  module.exports = require('./keys.dev');
 }
+

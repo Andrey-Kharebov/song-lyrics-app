@@ -8,7 +8,7 @@ app.use(express.json({ extended: true }));
 
 app.use('/', require('./routes/app.routes'));
 
-const PORT = keys.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 async function start() {
   try {

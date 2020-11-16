@@ -1,6 +1,6 @@
 import { combineReducers, applyMiddleware, createStore } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 import bandsReducer from './reducers/bands-reducer';
 import songsReducer from './reducers/songs-reducer';
 import lyricsReducer from './reducers/lyrics-reducer';
